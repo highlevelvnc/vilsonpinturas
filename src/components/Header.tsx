@@ -43,7 +43,7 @@ export function Header() {
             width={520}
             height={325}
             priority
-            className="h-14 sm:h-16 lg:h-16 w-auto drop-shadow-[0_1px_0_rgba(13,27,42,0.04)]"
+            className="h-16 sm:h-16 lg:h-16 w-auto max-w-[min(60vw,260px)] drop-shadow-[0_1px_0_rgba(13,27,42,0.04)]"
           />
         </a>
 
@@ -112,7 +112,7 @@ export function Header() {
                   initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.05 + i * 0.04 }}
-                  className="flex items-center justify-between border-b border-navy-900/5 py-4 text-base font-medium text-navy-900"
+                  className="flex items-center justify-between border-b border-navy-900/5 py-5 text-base font-medium text-navy-900 active:bg-navy-900/[0.03]"
                 >
                   {l.label}
                   <span className="text-gold-400">→</span>

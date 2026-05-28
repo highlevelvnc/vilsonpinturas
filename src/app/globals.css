@@ -8,11 +8,22 @@ body {
 }
 
 body {
-  padding-bottom: env(safe-area-inset-bottom);
+  min-height: 100dvh;
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+section[id] {
+  scroll-margin-top: 80px;
+}
+@media (min-width: 640px) {
+  section[id] {
+    scroll-margin-top: 96px;
+  }
 }
 
 body {
@@ -59,6 +70,16 @@ body {
   html {
     scroll-behavior: auto;
   }
+  .animate-ping,
+  .animate-pulse {
+    animation: none !important;
+  }
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .gold-hairline {
@@ -73,6 +94,9 @@ body {
 
 .text-balance {
   text-wrap: balance;
+}
+.text-pretty {
+  text-wrap: pretty;
 }
 
 .btn-primary {

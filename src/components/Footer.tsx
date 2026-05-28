@@ -14,7 +14,13 @@ const SERVICES = [
 
 export function Footer() {
   return (
-    <footer className="relative bg-navy-900 text-white pt-14 sm:pt-20 pb-24 sm:pb-10 overflow-hidden">
+    <footer
+      className="relative bg-navy-900 text-white pt-14 sm:pt-20 pb-28 sm:pb-12 overflow-hidden"
+      style={{
+        paddingBottom:
+          "max(calc(env(safe-area-inset-bottom, 0px) + 7rem), 3rem)",
+      }}
+    >
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-px gold-hairline opacity-60"

@@ -33,9 +33,9 @@ export function FloatingWhatsApp() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 24, scale: 0.9 }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="fixed bottom-4 right-4 sm:bottom-7 sm:right-7 z-40 flex items-center gap-3"
+          className="fixed right-4 sm:right-7 z-40 flex items-center gap-3"
           style={{
-            paddingBottom: "env(safe-area-inset-bottom)",
+            bottom: "calc(env(safe-area-inset-bottom, 0px) + 1rem)",
           }}
         >
           <AnimatePresence>
@@ -56,7 +56,7 @@ export function FloatingWhatsApp() {
             target="_blank"
             rel="noopener"
             aria-label="Falar no WhatsApp"
-            className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-gold ring-4 ring-white/80 transition-transform hover:scale-105"
+            className="relative flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-gold ring-4 ring-white/80 transition-transform hover:scale-105 active:scale-95"
           >
             <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-30" />
             <svg viewBox="0 0 24 24" fill="currentColor" className="relative h-7 w-7" aria-hidden>

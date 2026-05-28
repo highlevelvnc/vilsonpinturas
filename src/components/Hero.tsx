@@ -27,12 +27,12 @@ export function Hero() {
           <h1
             data-reveal
             data-reveal-delay="80"
-            className="mt-5 sm:mt-6 font-display text-[2rem] leading-[1.1] sm:text-5xl lg:text-6xl xl:text-7xl sm:leading-[1.05] font-bold text-navy-900 text-balance"
+            className="mt-5 sm:mt-6 font-display text-[1.875rem] xs:text-[2rem] leading-[1.12] sm:text-5xl lg:text-6xl xl:text-7xl sm:leading-[1.05] font-bold text-navy-900 text-balance"
           >
             Pintura profissional para{" "}
-            <span className="relative whitespace-nowrap">
+            <span className="relative inline-block">
               <span className="relative z-10">casas</span>
-              <span className="absolute inset-x-0 bottom-1 h-3 bg-gold-200/70 -z-0" />
+              <span className="absolute inset-x-0 bottom-0.5 sm:bottom-1 h-2 sm:h-3 bg-gold-200/70 -z-0" />
             </span>
             , empresas, fachadas e muros.
           </h1>
@@ -40,7 +40,7 @@ export function Hero() {
           <p
             data-reveal
             data-reveal-delay="160"
-            className="mt-5 sm:mt-7 max-w-xl text-base sm:text-lg text-graphite leading-relaxed"
+            className="mt-5 sm:mt-7 max-w-xl text-[15px] sm:text-lg text-graphite leading-relaxed text-pretty"
           >
             Serviços de pintura com acabamento de qualidade, organização e
             confiança do início ao fim. Cada superfície tratada com o cuidado
@@ -52,11 +52,16 @@ export function Hero() {
             data-reveal-delay="240"
             className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4"
           >
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn-gold w-full sm:w-auto">
-              <WhatsAppIcon className="h-4 w-4" />
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener"
+              className="btn-gold w-full sm:w-auto !py-4 sm:!py-3.5 text-[15px]"
+            >
+              <WhatsAppIcon className="h-5 w-5" />
               Pedir orçamento WhatsApp
             </a>
-            <a href="#servicos" className="btn-ghost w-full sm:w-auto">
+            <a href="#servicos" className="btn-ghost w-full sm:w-auto !py-4 sm:!py-3.5 text-[15px]">
               Ver serviços
             </a>
           </div>
@@ -64,7 +69,7 @@ export function Hero() {
           <div
             data-reveal
             data-reveal-delay="320"
-            className="mt-10 sm:mt-12 grid grid-cols-3 gap-3 sm:gap-4 max-w-md"
+            className="mt-10 sm:mt-12 grid grid-cols-3 gap-2 sm:gap-4 max-w-md"
           >
             {[
               { v: "+10", l: "Anos de prática" },
@@ -102,7 +107,7 @@ export function Hero() {
           <div
             data-reveal
             data-reveal-delay="220"
-            className="absolute -bottom-6 -left-6 hidden sm:block rounded-2xl bg-white/95 backdrop-blur px-5 py-4 shadow-soft ring-1 ring-navy-900/10 max-w-[240px]"
+            className="absolute -bottom-4 left-4 sm:-bottom-6 sm:-left-6 hidden sm:block rounded-2xl bg-white/95 backdrop-blur px-5 py-4 shadow-soft ring-1 ring-navy-900/10 max-w-[240px]"
           >
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold-400/20 text-gold-500">

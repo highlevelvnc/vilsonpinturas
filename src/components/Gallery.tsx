@@ -17,8 +17,8 @@ const ITEMS: Item[] = [
     alt: "Fachada de habitação residencial pintada em branco — Vilson Pinturas",
     label: "Fachada residencial",
     badge: "Obra recente",
-    span: "lg:col-span-2 lg:row-span-2",
-    ratio: "aspect-[4/5]",
+    span: "col-span-2 lg:col-span-2 lg:row-span-2",
+    ratio: "aspect-[16/10] lg:aspect-[4/5]",
   },
   {
     src: "/portfolio/obra-2.jpg",

@@ -22,6 +22,11 @@ export function VideoShowcase() {
   const refs = useRef<Array<HTMLVideoElement | null>>([]);
 
   useEffect(() => {
+    const reduce =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

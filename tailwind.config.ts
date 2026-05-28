@@ -49,6 +49,9 @@ const config: Config = {
         padding: { DEFAULT: "1.25rem", lg: "2rem" },
         screens: { "2xl": "1280px" },
       },
+      screens: {
+        xs: "400px",
+      },
     },
   },
   plugins: [],
