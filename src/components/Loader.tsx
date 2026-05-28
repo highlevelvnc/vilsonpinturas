@@ -35,21 +35,21 @@ export function Loader() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-navy-900"
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-bone px-6"
           aria-hidden
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="relative flex h-20 w-20 sm:h-24 sm:w-24 items-center justify-center rounded-2xl bg-white shadow-soft"
+            className="w-full max-w-xs sm:max-w-sm"
           >
             <Image
               src="/logo.png"
-              alt={`Logo ${COMPANY.name}`}
-              fill
-              sizes="96px"
-              className="object-contain p-3"
+              alt={`${COMPANY.name} — ${COMPANY.tagline}`}
+              width={520}
+              height={325}
+              className="w-full h-auto"
               priority
             />
           </motion.div>
@@ -58,17 +58,14 @@ export function Loader() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.5 }}
-            className="mt-8 text-center"
+            className="mt-2 text-center"
           >
-            <div className="font-display text-lg sm:text-xl font-semibold text-white">
-              {COMPANY.name}
-            </div>
-            <div className="mt-1 text-[10px] sm:text-xs uppercase tracking-[0.28em] text-gold-300">
+            <div className="text-[10px] sm:text-xs uppercase tracking-[0.28em] text-gold-500">
               {COMPANY.tagline}
             </div>
           </motion.div>
 
-          <div className="mt-8 h-px w-40 sm:w-56 overflow-hidden bg-white/10">
+          <div className="mt-8 h-px w-40 sm:w-56 overflow-hidden bg-navy-900/10">
             <motion.div
               initial={{ x: "-100%" }}
               animate={{ x: "100%" }}

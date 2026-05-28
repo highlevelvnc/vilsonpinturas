@@ -4,6 +4,7 @@ import { Services } from "@/components/Services";
 import { WhyUs } from "@/components/WhyUs";
 import { About } from "@/components/About";
 import { Gallery } from "@/components/Gallery";
+import { VideoShowcase } from "@/components/VideoShowcase";
 import { CTA } from "@/components/CTA";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
@@ -23,6 +24,7 @@ export default function HomePage() {
         <WhyUs />
         <About />
         <Gallery />
+        <VideoShowcase />
         <CTA />
         <FAQ />
       </main>

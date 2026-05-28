@@ -2,25 +2,36 @@
 
 import Image from "next/image";
 
-const ITEMS = [
+type Item = {
+  src: string;
+  alt: string;
+  label: string;
+  badge?: string;
+  span: string;
+  ratio: string;
+};
+
+const ITEMS: Item[] = [
   {
-    src: "https://images.unsplash.com/photo-1503594384566-461fe158e797?auto=format&fit=crop&w=1200&q=80",
-    alt: "Interior moderno com paredes acabadas",
-    label: "Pintura interior",
+    src: "/portfolio/obra-1.jpg",
+    alt: "Fachada de habitação residencial pintada em branco — Vilson Pinturas",
+    label: "Fachada residencial",
+    badge: "Obra recente",
     span: "lg:col-span-2 lg:row-span-2",
     ratio: "aspect-[4/5]",
   },
   {
-    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
-    alt: "Fachada residencial pintada",
+    src: "/portfolio/obra-2.jpg",
+    alt: "Conjunto de moradias com fachada acabada em branco — Vilson Pinturas",
     label: "Fachadas",
+    badge: "Obra recente",
     span: "",
     ratio: "aspect-[4/3]",
   },
   {
-    src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80",
-    alt: "Sala com acabamento branco",
-    label: "Residencial",
+    src: "https://images.unsplash.com/photo-1503594384566-461fe158e797?auto=format&fit=crop&w=1200&q=80",
+    alt: "Interior moderno com paredes acabadas",
+    label: "Pintura interior",
     span: "",
     ratio: "aspect-[4/3]",
   },
@@ -81,8 +92,13 @@ export function Gallery() {
                 className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-900/70 via-navy-900/0 to-transparent" />
-              <figcaption className="absolute inset-x-4 bottom-4 flex items-center justify-between">
-                <span className="rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-navy-900">
+              {it.badge && (
+                <span className="absolute top-3 left-3 sm:top-4 sm:left-4 rounded-full bg-gold-400 px-3 py-1 text-[10px] sm:text-xs font-semibold text-navy-900 shadow-soft">
+                  {it.badge}
+                </span>
+              )}
+              <figcaption className="absolute inset-x-3 bottom-3 sm:inset-x-4 sm:bottom-4 flex items-center justify-between">
+                <span className="rounded-full bg-white/95 px-3 py-1 text-[10px] sm:text-xs font-semibold text-navy-900">
                   {it.label}
                 </span>
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gold-400 text-navy-900 translate-y-2 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">

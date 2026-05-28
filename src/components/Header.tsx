@@ -32,25 +32,15 @@ export function Header() {
       }`}
     >
       <div className="container flex h-16 sm:h-20 items-center justify-between">
-        <a href="#inicio" className="flex items-center gap-3 group">
-          <span className="relative h-10 w-10 sm:h-11 sm:w-11 overflow-hidden rounded-lg ring-1 ring-navy-900/10 bg-white">
-            <Image
-              src="/logo.png"
-              alt={`Logo ${COMPANY.name}`}
-              fill
-              sizes="44px"
-              className="object-contain p-1"
-              priority
-            />
-          </span>
-          <span className="flex flex-col leading-none">
-            <span className="font-display text-sm sm:text-base font-semibold text-navy-900">
-              {COMPANY.name}
-            </span>
-            <span className="hidden sm:block text-[10px] uppercase tracking-[0.22em] text-gold-500">
-              {COMPANY.tagline}
-            </span>
-          </span>
+        <a href="#inicio" className="flex items-center group" aria-label={COMPANY.name}>
+          <Image
+            src="/logo.png"
+            alt={`${COMPANY.name} — ${COMPANY.tagline}`}
+            width={520}
+            height={325}
+            priority
+            className="h-10 sm:h-12 w-auto"
+          />
         </a>
 
         <nav className="hidden lg:flex items-center gap-9">

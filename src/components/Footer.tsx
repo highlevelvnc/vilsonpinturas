@@ -22,24 +22,15 @@ export function Footer() {
 
       <div className="container grid grid-cols-1 md:grid-cols-12 gap-10">
         <div className="md:col-span-5">
-          <div className="flex items-center gap-3">
-            <span className="relative h-12 w-12 overflow-hidden rounded-lg bg-white ring-1 ring-white/15">
-              <Image
-                src="/logo.png"
-                alt={`Logo ${COMPANY.name}`}
-                fill
-                sizes="48px"
-                className="object-contain p-1"
-              />
-            </span>
-            <div className="leading-none">
-              <div className="font-display text-lg font-semibold">
-                {COMPANY.name}
-              </div>
-              <div className="mt-1 text-[10px] uppercase tracking-[0.22em] text-gold-300">
-                {COMPANY.tagline}
-              </div>
-            </div>
+          <Image
+            src="/logo.png"
+            alt={`${COMPANY.name} — ${COMPANY.tagline}`}
+            width={520}
+            height={325}
+            className="h-14 sm:h-16 w-auto brightness-0 invert opacity-95"
+          />
+          <div className="mt-4 text-[10px] uppercase tracking-[0.28em] text-gold-300">
+            {COMPANY.tagline}
           </div>
           <p className="mt-6 max-w-md text-sm text-white/65 leading-relaxed">
             Pintura residencial, comercial, fachadas e muros em Portugal.

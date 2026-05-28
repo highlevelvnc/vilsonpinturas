@@ -89,8 +89,8 @@ export function Hero() {
             className="relative aspect-[4/5] sm:aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-soft ring-1 ring-navy-900/10 mt-6 lg:mt-0"
           >
             <Image
-              src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1200&q=80"
-              alt="Pintor profissional a aplicar acabamento numa parede interior"
+              src="/portfolio/obra-1.jpg"
+              alt="Obra recente da Vilson Pinturas — fachada residencial pintada"
               fill
               priority
               sizes="(min-width: 1024px) 40vw, 90vw"
