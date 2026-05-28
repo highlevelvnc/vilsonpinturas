@@ -64,7 +64,7 @@ export function VideoShowcase() {
           </p>
         </div>
 
-        <div className="mt-10 sm:mt-14 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        <div className="mt-10 sm:mt-14 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-3xl mx-auto">
           {VIDEOS.map((v, i) => (
             <figure
               key={v.src}
@@ -82,7 +82,7 @@ export function VideoShowcase() {
                 loop
                 playsInline
                 preload="metadata"
-                className="block w-full aspect-[4/5] sm:aspect-[16/10] object-cover"
+                className="block w-full aspect-[9/16] object-cover"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-900/85 via-navy-900/20 to-transparent" />
               <figcaption className="absolute inset-x-4 bottom-4 sm:inset-x-6 sm:bottom-6 flex items-end justify-between gap-3 text-white">
