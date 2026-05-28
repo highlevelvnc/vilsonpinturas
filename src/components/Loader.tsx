@@ -46,7 +46,7 @@ export function Loader() {
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-[320px] sm:max-w-md rounded-2xl bg-white px-8 py-10 sm:px-12 sm:py-12 shadow-soft"
+            className="relative w-full max-w-[320px] sm:max-w-md"
           >
             <Image
               src="/logo.png"
