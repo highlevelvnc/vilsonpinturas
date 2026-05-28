@@ -27,19 +27,23 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-[0_1px_0_0_rgba(13,27,42,0.06)]"
-          : "bg-transparent"
+          ? "bg-white/95 backdrop-blur-md shadow-[0_1px_0_0_rgba(13,27,42,0.08)]"
+          : "bg-white/85 backdrop-blur-sm"
       }`}
     >
-      <div className="container flex h-16 sm:h-20 items-center justify-between">
-        <a href="#inicio" className="flex items-center group" aria-label={COMPANY.name}>
+      <div className="container relative flex h-20 sm:h-24 items-center justify-between">
+        <a
+          href="#inicio"
+          className="flex items-center group absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0"
+          aria-label={COMPANY.name}
+        >
           <Image
             src="/logo.png"
             alt={`${COMPANY.name} — ${COMPANY.tagline}`}
             width={520}
             height={325}
             priority
-            className="h-10 sm:h-12 w-auto"
+            className="h-14 sm:h-16 lg:h-16 w-auto drop-shadow-[0_1px_0_rgba(13,27,42,0.04)]"
           />
         </a>
 
@@ -63,11 +67,12 @@ export function Header() {
           </a>
         </div>
 
+        <span className="lg:hidden block w-11" aria-hidden />
         <button
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-navy-900/15 bg-white"
+          className="lg:hidden relative z-10 inline-flex h-11 w-11 items-center justify-center rounded-full border border-navy-900/15 bg-white shadow-sm"
         >
           <span className="relative block h-3 w-5">
             <span
@@ -96,7 +101,7 @@ export function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:hidden absolute inset-x-0 top-16 sm:top-20 bg-white/98 backdrop-blur-md shadow-soft"
+            className="lg:hidden absolute inset-x-0 top-20 sm:top-24 bg-white/98 backdrop-blur-md shadow-soft"
           >
             <nav className="container flex flex-col gap-1 py-6">
               {NAV_LINKS.map((l, i) => (

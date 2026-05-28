@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative overflow-hidden bg-gradient-to-b from-bone via-bone to-white pt-28 sm:pt-32 lg:pt-40 pb-16 sm:pb-24 lg:pb-32"
+      className="relative overflow-hidden bg-gradient-to-b from-bone via-bone to-white pt-32 sm:pt-36 lg:pt-40 pb-16 sm:pb-24 lg:pb-32"
     >
       <div
         aria-hidden

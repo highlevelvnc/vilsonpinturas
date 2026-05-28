@@ -35,14 +35,18 @@ export function Loader() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-bone px-6"
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-navy-900 px-6"
           aria-hidden
         >
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -top-32 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-gold-400/10 blur-3xl"
+          />
           <motion.div
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="w-full max-w-xs sm:max-w-sm"
+            className="relative w-full max-w-[320px] sm:max-w-md rounded-2xl bg-white px-8 py-10 sm:px-12 sm:py-12 shadow-soft"
           >
             <Image
               src="/logo.png"
@@ -58,14 +62,14 @@ export function Loader() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.5 }}
-            className="mt-2 text-center"
+            className="mt-8 text-center"
           >
-            <div className="text-[10px] sm:text-xs uppercase tracking-[0.28em] text-gold-500">
+            <div className="text-[10px] sm:text-xs uppercase tracking-[0.32em] text-gold-300">
               {COMPANY.tagline}
             </div>
           </motion.div>
 
-          <div className="mt-8 h-px w-40 sm:w-56 overflow-hidden bg-navy-900/10">
+          <div className="mt-8 h-px w-40 sm:w-56 overflow-hidden bg-white/10">
             <motion.div
               initial={{ x: "-100%" }}
               animate={{ x: "100%" }}
